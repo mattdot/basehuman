@@ -8,7 +8,7 @@ const data = require("../lib/data/en");
 console.log('starting tests...', new Date().toISOString());
 
 describe("basehuman", ()=> {
-    let bases = [128, 1024, 2048, 4096, 10000];
+    let bases = [128, 1024, 2048, 4096, 8192, 10000];
     bases.forEach(function(base) {
         describe(`base-${base}`, ()=> {
             let bh = new BaseHuman({ base : base });
@@ -23,7 +23,9 @@ describe("basehuman", ()=> {
 
             describe("decode", () => {
                 let levels = [0,1,2].map((p) => Math.pow(bh.base(),p));
-                let tests = levels.concat(levels.map((x)=> x-1), levels.map((x)=> x+1), levels.map((x)=>x+2));
+                let tests = levels.concat(levels.map((x)=> x-1), levels.map((x)=> x+1), levels.map((x)=>x+2)).concat(
+                    Array.from({length:50}).fill(0).map(()=>Math.ceil(Math.random()*Math.pow(2,32)))
+                );
                 tests.forEach((i) => {
                     it(`should decode '${bh.encode(i)}' as ${i}`, ()=>{    
                         //let n = Math.ceil(Math.random() * Number.MAX_VALUE);
