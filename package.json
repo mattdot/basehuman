@@ -1,6 +1,6 @@
 {
   "name": "basehuman",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Encode binary or large numbers in human-friendly natural language",
   "main": "lib/basehuman.js",
   "scripts": {
