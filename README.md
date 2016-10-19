@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mattdot/basehuman.svg?branch=master)](https://travis-ci.org/mattdot/basehuman)
+
 # Overview
 *BaseHuman* uses words instead of digits to encode large numbers in a human-readable and rememberable way.  By using words from the user's language, *BaseHuman* can use bases up to 8192 and encode very large numbers in just a couple words.
 
@@ -11,10 +13,13 @@ BaseHuman is perfect for use cases where users need to remember a magic number f
 
 # Example
 This example shows how to convert a javascript number to BaseHuman
-	
+
+	npm install --save basehuman
+.
+
 	const BaseHuman = require("basehuman").BaseHuman;
 	let bh = new BaseHuman();
-	console.log(bh.encode(3212781663));
+	console.log(bh.encode(3212781663));  //outputs 'no washing tags'
   
 # Options
 ## Using a different base
