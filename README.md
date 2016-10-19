@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/mattdot/basehuman.svg?branch=master)](https://travis-ci.org/mattdot/basehuman)
 
+	BaseHuman is pre-release and the vocabulary will be changed before v1, breaking compatibility with the current version.  The current version can be used to evaluate the library, but should not be used in production at this time.
+
 # Overview
 *BaseHuman* uses words instead of digits to encode large numbers in a human-readable and rememberable way.  By using words from the user's language, *BaseHuman* can use bases up to 8192 and encode very large numbers in just a couple words.
 
