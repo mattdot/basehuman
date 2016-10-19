@@ -1,0 +1,28 @@
+{
+  "name": "basehuman",
+  "version": "0.1.0",
+  "description": "Encode binary or large numbers in human-friendly natural language",
+  "main": "lib/basehuman.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattdot/basehuman.git"
+  },
+  "keywords": [
+    "encode",
+    "decode",
+    "human-readable"
+  ],
+  "author": "Matt Dotson <mdotson@microsoft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattdot/basehuman/issues"
+  },
+  "homepage": "https://github.com/mattdot/basehuman#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}
