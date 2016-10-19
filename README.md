@@ -20,6 +20,7 @@ This example shows how to convert a javascript number to BaseHuman
 	const BaseHuman = require("basehuman").BaseHuman;
 	let bh = new BaseHuman();
 	console.log(bh.encode(3212781663));  //outputs 'no washing tags'
+	console.log(bh.decode('no washing tags')); //outputs 3212781663
   
 # Options
 ## Using a different base
