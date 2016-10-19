@@ -7,9 +7,10 @@
 
 | Base-10     | Base-32       | BaseHuman-8192              |
 |-------------|---------------|-----------------------------|
-|824,941,551  |GEVZX3Y=       |with personnel hobby         |
-|3,828,098,310|4QWCKBQ=       |their children unique        |
-|3,212,781,663|X57SQXY=       |no washing tags              |
+|3,212,781,663|bwm7zfr        |will brussels flower         |
+|2,356,682,812|7gg7h30        |are fortune has              |
+|1,892,374,852|8hcwpw0        |him stones finely            |
+|2,348,348,959|3zvfh2r        |my transmit frost            |   
 
 BaseHuman is perfect for use cases where users need to remember a magic number for a brief period of time and enter it on another screen or app, such as in authenticators.
 

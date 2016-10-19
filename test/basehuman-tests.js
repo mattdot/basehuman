@@ -8,7 +8,7 @@ const data = require("../lib/data/en");
 console.log('starting tests...', new Date().toISOString());
 
 describe("basehuman", ()=> {
-    let bases = [128, 1024, 2048, 4096, 8192, 10000];
+    let bases = [128, 1024, 2048, 4096, 8192];
     bases.forEach(function(base) {
         describe(`base-${base}`, ()=> {
             let bh = new BaseHuman({ base : base });
@@ -25,8 +25,7 @@ describe("basehuman", ()=> {
                 let levels = [0,1,2].map((p) => Math.pow(bh.base(),p));
                 let tests = levels.concat(
                     levels.map((x)=> x-1), levels.map((x)=> x+1), levels.map((x)=>x+2),
-                    Array.from({length:50}).fill(0).map(()=>Math.ceil(Math.random()*Math.pow(2,32))),
-                    Array.from({length: bh.base()}).fill(0).map((v,i,arr)=>i)
+                    Array.from({length:50}).fill(0).map(()=>Math.ceil(Math.random()*Math.pow(2,32)))
                 );
                 tests.forEach((i) => {
                     it(`should decode '${bh.encode(i)}' as ${i}`, ()=>{    
@@ -44,6 +43,20 @@ describe("basehuman", ()=> {
                 //     //let n = Math.ceil(Math.random() * Number.MAX_VALUE);
                 //     chai.assert.equal(bh.decode(bh.encode(Number.MAX_VALUE)), Number.MAX_VALUE);
                 // });
+            });
+        });
+    });
+
+    let languages = ["en", "es"];
+    languages.forEach((l) => {
+        describe(`base-10000, language=${l}`, ()=> {
+            let bh = new BaseHuman({ base : 10000, language: l });
+            let tests = Array.from({length: bh.base()}).fill(0).map((v,i,arr)=>i);
+            tests.forEach((i) => {
+                it(`should decode '${bh.encode(i)}' as ${i}`, ()=>{    
+                    //let n = Math.ceil(Math.random() * Number.MAX_VALUE);
+                    chai.assert.equal(bh.decode(bh.encode(i)), i);
+                });
             });
         });
     });
